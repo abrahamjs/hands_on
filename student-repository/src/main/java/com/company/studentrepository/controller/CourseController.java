@@ -15,24 +15,24 @@ public class CourseController {
     private CourseDao courseDao;
 
     @RequestMapping(value="/course", method = RequestMethod.POST)
-    public Course createStudent(@RequestBody Course course) {
+    public Course createCourse(@RequestBody Course course) {
         return courseDao.save(course);
 
     }
     @RequestMapping(value="/course/{id}", method = RequestMethod.GET)
-    public Course getStudentById(@PathVariable int id) {
+    public Course getCourseById(@PathVariable int id) {
         return courseDao.findById(id).get();
     }
     @RequestMapping(value="/course/{id}", method = RequestMethod.PUT)
-    public void updateCar(@RequestBody Course course, @PathVariable int id) {
+    public void updateCourse(@RequestBody Course course, @PathVariable int id) {
         courseDao.save(course);
     }
     @RequestMapping(value="/course/{id}", method = RequestMethod.DELETE)
-    public void deleteCar(@PathVariable int id) {
+    public void deleteCourse(@PathVariable int id) {
         courseDao.deleteById(id);
     }
     @RequestMapping(value="/course", method = RequestMethod.GET)
-    public List<Course> getAllStudents() {
+    public List<Course> getAllCourses() {
         return courseDao.findAll();
     }
 

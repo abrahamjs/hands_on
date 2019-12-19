@@ -28,7 +28,7 @@ public interface StudentClient {
     Student createStudent(@RequestBody Student student);
 
     @RequestMapping(value="/students/{id}", method = RequestMethod.GET)
-    Student getStudentById(@PathVariable int id);
+    Student ge(@PathVariable int id);
 
     @RequestMapping(value="/students/{id}", method = RequestMethod.PUT)
     void updateCar(@RequestBody Student student, @PathVariable int id) ;

@@ -22,11 +22,11 @@ public class StudentController {
         return studentDao.findById(id).get();
     }
     @RequestMapping(value="/students/{id}", method = RequestMethod.PUT)
-    public void updateCar(@RequestBody Student student, @PathVariable int id) {
+    public void updateStudent(@RequestBody Student student, @PathVariable int id) {
         studentDao.save(student);
     }
     @RequestMapping(value="/students/{id}", method = RequestMethod.DELETE)
-    public void deleteCar(@PathVariable int id) {
+    public void deleteStudent(@PathVariable int id) {
         studentDao.deleteById(id);
     }
     @RequestMapping(value="/students", method = RequestMethod.GET)
