@@ -16,28 +16,27 @@ public interface StudentClient {
     Course getStudentById(@PathVariable int id);
 
     @RequestMapping(value="/course/{id}", method = RequestMethod.PUT)
-    public void updateCar(@RequestBody Course course, @PathVariable int id) ;
+    public void updateStudent(@RequestBody Course course, @PathVariable int id) ;
 
     @RequestMapping(value="/course/{id}", method = RequestMethod.DELETE)
-    deleteCar(@PathVariable int id);
+    void deleteStudent(@PathVariable int id);
 
     @RequestMapping(value="/course", method = RequestMethod.GET)
      List<Course> getAllStudents();
 
     @RequestMapping(value="/students", method = RequestMethod.POST)
-    Student createStudent(@RequestBody Student student);
+    Student createCourse(@RequestBody Student student);
 
     @RequestMapping(value="/students/{id}", method = RequestMethod.GET)
-    Student ge(@PathVariable int id);
+    Student getCourse(@PathVariable int id);
 
     @RequestMapping(value="/students/{id}", method = RequestMethod.PUT)
-    void updateCar(@RequestBody Student student, @PathVariable int id) ;
+    void updateCourse(@RequestBody Student student, @PathVariable int id) ;
 
     @RequestMapping(value="/students/{id}", method = RequestMethod.DELETE)
-    void deleteCar(@PathVariable int id);
+    void deleteCourse(@PathVariable int id);
 
     @RequestMapping(value="/students", method = RequestMethod.GET)
-    List<Student> getAllStudents();
 
     }
 
