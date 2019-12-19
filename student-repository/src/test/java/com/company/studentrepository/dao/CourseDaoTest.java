@@ -32,6 +32,7 @@ public class CourseDaoTest {
         course = new Course();
         course.setName("Math");
         course.setScore(100);
+        course.setScore(100);
 
         courses = Arrays.asList(course);
 
